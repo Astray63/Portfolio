@@ -119,7 +119,7 @@ Ce portfolio est en ligne sur **Netlify** et peut être consulté ici : [elijahl
 
 ## 📬 Me contacter
 
-- **Email** : [elijah.lasserre@example.com](mailto:elijah.lasserre@example.com)
+- **Email** : [elijahlasserre63@gmail.com](mailto:elijahlasserre63@gmail.com)
 - **LinkedIn** : [linkedin.com/in/elijah-lasserre](https://linkedin.com/in/elijah-lasserre)
 - **GitHub** : [github.com/Astray63](https://github.com/Astray63)
 
