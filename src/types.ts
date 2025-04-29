@@ -46,6 +46,12 @@ export interface Content {
     role: string;
     period: string;
     description: string[];
+    internship?: {
+      company: string;
+      role: string;
+      period: string;
+      description: string[];
+    };
   };
   projects: {
     title: string;

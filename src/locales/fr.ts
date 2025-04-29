@@ -33,7 +33,17 @@ export const fr: Content = {
       'Maintenance informatique régulière pour assurer une performance optimale des systèmes',
       'Mise en place et enseignement des bonnes pratiques en matière de sécurité numérique',
       'Développement et animation d\'ateliers sur la littératie numérique et la sécurité en ligne'
-    ]
+    ],
+    internship: {
+      company: 'S2E Groupe',
+      role: 'Stagiaire en développement Web',
+      period: 'Janvier 2025 · 1 mois · Besançon, France',
+      description: [
+        'Réalisation du site web de l\'entreprise avec un focus sur le développement front-end.',
+        'Stage de 1 mois consacré à la création d\'interfaces utilisateur modernes et intuitives, en utilisant HTML, CSS, TypeScript et React.',
+        'Optimisation des performances et de l\'expérience utilisateur afin d\'assurer un site rapide, fluide et réactif.'
+      ]
+    }
   },
   projects: {
     title: 'Projets Principaux',
@@ -80,9 +90,9 @@ export const fr: Content = {
     languages: {
       title: 'Langues',
       items: [
-        { name: 'Français', level: 'Langue maternelle' },
-        { name: 'Anglais', level: 'Courant' },
-        { name: 'Espagnol', level: 'Notions' }
+        { name: 'Français', level: 'Langue maternelle', code: 'fr' },
+        { name: 'Anglais', level: 'Courant', code: 'en' },
+        { name: 'Espagnol', level: 'Notions', code: 'es' }
       ]
     }
   },

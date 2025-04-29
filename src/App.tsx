@@ -76,20 +76,42 @@ const App: React.FC = () => {
       {/* Section Expérience */}
       <Section id="experience">
         <SectionHeader icon={Server} title={content.experience.title} />
-        <div className={sectionClass}>
-          <h3 className="text-lg md:text-xl font-semibold">
-            {content.experience.company}
-          </h3>
-          <p className="mt-1 text-cyber-accent">{content.experience.role}</p>
-          <p className="mt-1">{content.experience.period}</p>
-          <ul className="mt-4 space-y-2">
-            {content.experience.description.map((item, index) => (
-              <li key={index} className="flex items-start">
-                <span className="h-1.5 w-1.5 rounded-full bg-cyber-accent mt-2 mr-2" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="space-y-6">
+          <div className={sectionClass}>
+            <h3 className="text-lg md:text-xl font-semibold">
+              {content.experience.company}
+            </h3>
+            <p className="mt-1 text-cyber-accent">{content.experience.role}</p>
+            <p className="mt-1">{content.experience.period}</p>
+            <ul className="mt-4 space-y-2">
+              {content.experience.description.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="h-1.5 w-1.5 rounded-full bg-cyber-accent mt-2 mr-2" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className={sectionClass}>
+            <h3 className="text-lg md:text-xl font-semibold">
+              {content.experience.internship?.company || "S2E Groupe"}
+            </h3>
+            <p className="mt-1 text-cyber-accent">{content.experience.internship?.role || "Stagiaire en développement Web"}</p>
+            <p className="mt-1">{content.experience.internship?.period || "Janvier 2025 · 1 mois · Besançon, France"}</p>
+            <ul className="mt-4 space-y-2">
+              {(content.experience.internship?.description || [
+                "Réalisation du site web de l'entreprise avec un focus sur le développement front-end.",
+                "Stage de 1 mois consacré à la création d'interfaces utilisateur modernes et intuitives, en utilisant HTML, CSS, TypeScript et React.",
+                "Optimisation des performances et de l'expérience utilisateur afin d'assurer un site rapide, fluide et réactif."
+              ]).map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="h-1.5 w-1.5 rounded-full bg-cyber-accent mt-2 mr-2" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Section>
 

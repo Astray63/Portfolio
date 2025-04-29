@@ -33,7 +33,17 @@ export const en: Content = {
       'Conducted regular IT maintenance to ensure optimal system performance',
       'Implemented and taught best practices for digital security',
       'Developed and delivered workshops on digital literacy and online safety'
-    ]
+    ],
+    internship: {
+      company: 'S2E Groupe',
+      role: 'Web Development Intern',
+      period: 'January 2025 · 1 month · Besançon, France',
+      description: [
+        'Created the company\'s website with a focus on front-end development.',
+        'Completed a 1-month internship dedicated to building modern and intuitive user interfaces using HTML, CSS, TypeScript, and React.',
+        'Optimized performance and user experience to ensure a fast, smooth, and responsive website.'
+      ]
+    }
   },
   projects: {
     title: 'Featured Projects',
@@ -80,9 +90,9 @@ export const en: Content = {
     languages: {
       title: 'Languages',
       items: [
-        { name: 'French', level: 'Native' },
-        { name: 'English', level: 'Fluent' },
-        { name: 'Spanish', level: 'Basic' }
+        { name: 'French', level: 'Native', code: 'fr' },
+        { name: 'English', level: 'Fluent', code: 'en' },
+        { name: 'Spanish', level: 'Basic', code: 'es' }
       ]
     }
   },
