@@ -29,17 +29,22 @@ export default function DesktopWindow({
   const start = useRef<{ x: number; y: number; sx: number; sy: number }>({ x: 0, y: 0, sx: 0, sy: 0 })
   const rafRef = useRef<number | null>(null)
 
-  // initial offset based on appKey
+  // Center the window when it appears (and recenter on resize for responsiveness)
   useEffect(() => {
-    const offsets: Record<string, { x: number; y: number }> = {
-      about: { x: 80, y: 80 },
-      art: { x: 160, y: 120 },
-      philosophy: { x: 260, y: 140 },
-      resume: { x: 200, y: 160 },
+    const center = () => {
+      if (!winRef.current) return
+      const rect = winRef.current.getBoundingClientRect()
+      const x = Math.max(8, (window.innerWidth - rect.width) / 2)
+      // Keep a slight top margin so header isn't flush to top on small screens
+      const y = Math.max(16, (window.innerHeight - rect.height) / 2)
+      pos.current = { x, y }
+      applyTransform()
     }
-    const off = offsets[appKey] ?? { x: 120, y: 120 }
-    pos.current = off
-    applyTransform()
+
+    // Wait a frame so width/height (esp. responsive width) are correct
+    requestAnimationFrame(center)
+    window.addEventListener("resize", center)
+    return () => window.removeEventListener("resize", center)
   }, [appKey])
 
   const applyTransform = () => {
