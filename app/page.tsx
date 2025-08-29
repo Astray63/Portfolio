@@ -128,7 +128,7 @@ function SkillsContent() {
     },
     {
       category: "Langues",
-      skills: ["Français (Natif)", "Anglais (B2)"],
+      skills: ["Français (Natif)", "Anglais (B2 TOEIC)"],
     },
   ]
 
