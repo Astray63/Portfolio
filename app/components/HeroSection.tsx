@@ -45,7 +45,7 @@ export default function HeroSection() {
             inactiveTransition="transform 0.6s ease-in-out"
           >
             <img
-              src="/elijah-avatar-smile.png"
+              src="/elijah-avatar-head.png"
               alt="Portrait d'Elijah Lasserre"
               className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
             />
