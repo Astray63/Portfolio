@@ -1,13 +1,18 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Kanit } from "next/font/google"
 import "./globals.css"
 
+const kanit = Kanit({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-kanit",
+})
+
 export const metadata: Metadata = {
-  title: "Elijah Lasserre - Portfolio Cyberpunk",
-  description: "Portfolio de développeur full-stack spécialisé en cybersécurité",
-  generator: "v0.app",
+  title: "Elijah Lasserre — Développeur Full-Stack",
+  description:
+    "Portfolio d'Elijah Lasserre, développeur full-stack et mobile, co-fondateur de MEFLabs — Next.js, React, React Native, Swift, Supabase.",
 }
 
 export default function RootLayout({
@@ -16,16 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className="dark">
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistMono.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
+    <html lang="fr" className={kanit.variable}>
       <body>{children}</body>
     </html>
   )
