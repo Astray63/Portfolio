@@ -10,48 +10,30 @@ type Project = {
   category: string
   name: string
   href?: string
-  images: { col1Top: string; col1Bottom: string; col2: string }
+  preview: string
 }
 
 const PROJECTS: Project[] = [
   {
     number: "01",
-    category: "App iOS — +1 000 téléchargements, 4,9/5",
-    name: "ScrollUps — Fitness Blocker",
-    images: {
-      col1Top:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85",
-      col1Bottom:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85",
-      col2:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85",
-    },
+    category: "E-commerce — Matériel de nettoyage professionnel",
+    name: "Solution Haute Pression",
+    href: "https://boutique.solution-hautepression.fr/",
+    preview: "/projects/solution-haute-pression-preview.jpg",
   },
   {
     number: "02",
-    category: "App iOS — React Native",
-    name: "YesDate — Idées de sorties",
-    images: {
-      col1Top:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85",
-      col1Bottom:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85",
-      col2:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85",
-    },
+    category: "Site vitrine — Distribution alimentaire B2B",
+    name: "Perlla Distrib",
+    href: "https://perlla-distrib.fr/",
+    preview: "/projects/perlla-distrib-preview.jpg",
   },
   {
     number: "03",
-    category: "Client — E-commerce Next.js",
-    name: "MEFLabs",
-    images: {
-      col1Top:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85",
-      col1Bottom:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85",
-      col2:
-        "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85",
-    },
+    category: "Site vitrine — Boulangerie, pâtisserie & traiteur",
+    name: "Fraise & Farine",
+    href: "https://www.fraiseetfarine.fr/",
+    preview: "/projects/fraise-et-farine-preview.jpg",
   },
 ]
 
@@ -98,31 +80,13 @@ function ProjectCard({
           <LiveProjectButton href={project.href} />
         </div>
 
-        <div className="flex gap-3 sm:gap-4">
-          <div className="flex flex-col gap-3 sm:gap-4 w-[40%]">
-            <img
-              src={project.images.col1Top}
-              alt={project.name}
-              loading="lazy"
-              className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: "clamp(130px, 16vw, 230px)" }}
-            />
-            <img
-              src={project.images.col1Bottom}
-              alt={project.name}
-              loading="lazy"
-              className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: "clamp(160px, 22vw, 340px)" }}
-            />
-          </div>
-          <div className="w-[60%]">
-            <img
-              src={project.images.col2}
-              alt={project.name}
-              loading="lazy"
-              className="w-full h-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-            />
-          </div>
+        <div className="aspect-[3/2] sm:aspect-[16/9] overflow-hidden rounded-[32px] sm:rounded-[44px] md:rounded-[56px] border border-[#D7E2EA]/10 bg-black">
+          <img
+            src={project.preview}
+            alt={project.name}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
         </div>
       </motion.div>
     </div>
